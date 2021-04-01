@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3D modeling</title>
+</head>
+	<!--background image-->	      
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: black;
+		}
+		* {box-sizing: border-box;}
+
+		.bg-img {
+		  /* The image used */
+		  background-image: url("");
+		  width: 1520px;
+		  height: 667px;
+
+
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  
+		  /* Needed to position the navbar */
+		  position: relative;
+		}
+
+
+		/* The navbar */
+		.topnav {
+		  overflow: hidden;
+		  background-color: none;
+		  
+		}
+
+		/* Navbar links */
+		.topnav a {
+		  float: left;
+		  color: white ;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.topnav a:hover {
+		  background-color: #ccc;
+		  color: white
+		   
+		  
+		}
+		.topnav-right {
+		  float: right;
+		}
+		.
+
+		.h1 {
+			color: white	
+		}
+
+		/*transition*/
+
+		h1.thick {
+		  font-weight: bold;
+		}
+		h1 {
+			font-family:  Arial, Helvetica,  sans-serif;	
+		  	width: 360px;
+		  	height: none;
+			background: none ;
+			color: white
+		}
+
+		h3.light {
+		  font-weight: lighter;
+		}
+		  
+		h3 {
+		  width: 300px;
+		  font-family: Arial, Helvetica,Light, sans-serif ;
+		  color: white
+		}
+		 	 		
+		
+	</style>
+</head>
+
+<body>
+	<!--How TO - Navbar on Image;https://www.w3schools.com/howto/howto_css_navbar_image.asp-->
+
+	<div class="bg-img">
+
+	    <div class="topnav">
+	      <!--Logo;https://stackoverflow.com/questions/31368193/how-to-move-logo-to-top-in-html-->
+	      <div class="logo">
+            <a href="Portfolio.html"><img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\white logo.svg" alt="Logo";width="20p" height="30px" /></a>
+            <a href="Portfolio.html">Nguyen Thien Tung</a>
+          </div>  
+	      <div class="topnav-right">
+			<a href="Portfolio.html" >Bio</a>
+			<a href="Project.html">Project</a>
+			<a href="Contact.html">Contact</a>
+		  </div>					      
+	    </div>
+
+<!--Tab Images-->
+<section>
+	<!--How TO - Tab Gallery-->
+	<div style="text-align:center; color:white">
+	  <h2>3D modeling</h2>
+	  <p>To click down on the images :</p>
+	</div>
+
+	<!-- The four columns -->
+	<div class="row" style="margin: 100px" >
+	  <div class="column">
+	    <img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\3D 1.jpg" alt="1" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\3D 2.jpg" alt="2" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\3D 3.jpg" alt="3" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\3D 4.jpg" alt="4" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	  <div class="column">
+	    <img src="D:\truong dai hoc fpt\spring 2021\Web Design 2\Học tập\ass 3\image\3D 5.jpg" alt="5" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	  
+	</div>
+
+	<div class="container">
+	  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+	  <img id="expandedImg" style="width:100%">
+	  <div id="imgtext"></div>
+	</div>
+
+	<script>
+	function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+	</script>
+
+	<style>
+	* {
+	  box-sizing: border-box;
+	}
+
+	body {
+	  margin: 0;
+	  
+	}
+
+	/* The grid: Four equal columns that floats next to each other */
+	.column {
+	  float: center;
+	  width: 16%;
+	  padding: 10px;
+	}
+
+	/* Style the images inside the grid */
+	.column img {
+	  opacity: 0.8; 
+	  cursor: pointer; 
+	}
+
+	.column img:hover {
+	  opacity: 1;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+
+	}
+
+	/* The expanding image container */
+	.container {
+	  position: relative;
+	  display: none;
+	  left: 350px;
+  	  bottom: 730px; 
+  	  background-color: none;
+  	  width: 71%
+
+	}
+
+	/* Expanding image text */
+	#imgtext {
+	  position: absolute;
+	  bottom: 15px;
+	  left: 15px;
+	  color: white;
+	  font-size: 20px;
+	}
+
+	/* Closable button inside the expanded image */
+	.closebtn {
+	  position: absolute;
+	  top: 10px;
+	  right: 15px;
+	  color: white;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+
+	h2 {
+		color: white
+	}
+	</style>		
+	
+</section>	    
+
+</body>
+
+</html>
